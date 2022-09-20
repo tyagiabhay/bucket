@@ -1,0 +1,28 @@
+{
+    "Version": "2012-10-17",
+    "Id": "Policy1464968545158",
+    "Statement": [
+        {
+            "Sid": "",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:PutObject",
+            "Resource": [
+                "arn:aws:s3:::bucket-19-09-22/*.jfif",
+                "arn:aws:s3:::bucket-19-09-22/*.png",
+                "arn:aws:s3:::bucket-19-09-22/*.gif"
+            ]
+        },
+        {
+            "Sid": "",
+            "Effect": "Deny",
+            "Principal": "*",
+            "Action": "s3:PutObject",
+            "NotResource": [
+                "arn:aws:s3:::bucket-19-09-22/*.jfif",
+                "arn:aws:s3:::bucket-19-09-22/*.png",
+                "arn:aws:s3:::bucket-19-09-22/*.gif"
+            ]
+        }
+    ]
+}
