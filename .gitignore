@@ -1,7 +1,7 @@
 # Compiled files
 *.tfstate
 *.tfstate.backup
-*.tfstate.lock.hcl
+*.terraform.lock.hcl
 
 # logs
 *.log
