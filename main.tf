@@ -41,7 +41,7 @@ resource "aws_s3_bucket" "bucket" {
 
 resource "aws_s3_bucket_policy" "my-policy" {
   bucket = var.bucket_name
-  policy = <<EOF
+  policy = jsonencode(
   {
     "Version" : "2012-10-17",
     "Id" : "Policy1464968545158",
@@ -70,6 +70,6 @@ resource "aws_s3_bucket_policy" "my-policy" {
       }
     ]
   }
-EOF
+  )
 }
 
